@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/sb/GoogleDrive/Source-Code/android/ffmpeg-android-java/FFmpegAndroid/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="shipped_ffmpeg_version">n2.4.2</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/antpersan/AndroidstudioProjects/Video-Cutter-master/app/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="blue">#0000ff</color>
+    <color name="blue_light">#00ffff</color>
+    <color name="green">#00ff00</color>
+    <color name="red">#ff0000</color>
+    <color name="white">#ffffff</color>
+    <!-- From: file:/Users/antpersan/AndroidstudioProjects/Video-Cutter-master/app/src/main/res/values/dimen.xml -->
+    <eat-comment/>
+    <dimen name="default_margin">20dp</dimen>
+    <!-- From: file:/Users/antpersan/AndroidstudioProjects/Video-Cutter-master/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">TwoThumbsSeekBarActivity</string>
+    <string name="device_not_supported">Device not supported</string>
+    <string name="device_not_supported_message">FFmpeg is not supported on your device</string>
+    <!-- From: file:/Users/antpersan/AndroidstudioProjects/Video-Cutter-master/app/build/intermediates/exploded-aar/com.github.hiteshsondhi88.libffmpeg/FFmpegAndroid/0.2.5/res/values/values.xml -->
+    <eat-comment/>
+    <string name="shipped_ffmpeg_version">n2.4.2</string>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/antpersan/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.5.0/81241ff7078ef14f42ea2a8995fa09c096256e6b/javawriter-2.5.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81241ff7078ef14f42ea2a8995fa09c096256e6b">
+        <dex dex="/Users/antpersan/AndroidstudioProjects/Video-Cutter-master/app/build/intermediates/pre-dexed/debug/javawriter-2.5.0-099b7266056ccce0b25e89e1f08df673f4d8bcc3.jar" />
+    </item>
+    <item
+        jar="/Users/antpersan/.gradle/caches/modules-2/files-2.1/com.squareup.dagger/dagger-compiler/1.2.2/fa9b2f9ae597cedf2a66ef3e60662ff36bb60e57/dagger-compiler-1.2.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fa9b2f9ae597cedf2a66ef3e60662ff36bb60e57">
+        <dex dex="/Users/antpersan/AndroidstudioProjects/Video-Cutter-master/app/build/intermediates/pre-dexed/debug/dagger-compiler-1.2.2-f0120a26c19421180fd324da66487ac45ea305fa.jar" />
+    </item>
+    <item
+        jar="/Users/antpersan/.gradle/caches/modules-2/files-2.1/com.squareup.dagger/dagger/1.2.2/e8f912ee19ad84958510883ea191135276b091f8/dagger-1.2.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e8f912ee19ad84958510883ea191135276b091f8">
+        <dex dex="/Users/antpersan/AndroidstudioProjects/Video-Cutter-master/app/build/intermediates/pre-dexed/debug/dagger-1.2.2-4ab5169dda55eef27c92456485f08b415f603713.jar" />
+    </item>
+    <item
+        jar="/Users/antpersan/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/15.0/ed727a8d9f247e2050281cb083f1c77b09dcb5cd/guava-15.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ed727a8d9f247e2050281cb083f1c77b09dcb5cd">
+        <dex dex="/Users/antpersan/AndroidstudioProjects/Video-Cutter-master/app/build/intermediates/pre-dexed/debug/guava-15.0-69c6b52b0cfa655a42818b7965a76239d9d9d1b1.jar" />
+    </item>
+    <item
+        jar="/Users/antpersan/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/antpersan/AndroidstudioProjects/Video-Cutter-master/app/build/intermediates/pre-dexed/debug/javax.inject-1-64c87e3f8d170df4863d5e54f3c7ecb4b91d52be.jar" />
+    </item>
+    <item
+        jar="/Users/antpersan/AndroidstudioProjects/Video-Cutter-master/app/build/intermediates/exploded-aar/com.github.hiteshsondhi88.libffmpeg/FFmpegAndroid/0.2.5/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d4ec92c631de57ff2a3e9c5c6bdcf723e7020a4c">
+        <dex dex="/Users/antpersan/AndroidstudioProjects/Video-Cutter-master/app/build/intermediates/pre-dexed/debug/classes-31b404037aae85bb6c501271445fd59468734463.jar" />
+    </item>
+
+</items>

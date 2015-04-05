@@ -1,0 +1,1 @@
+int string shipped_ffmpeg_version 0x7f020000

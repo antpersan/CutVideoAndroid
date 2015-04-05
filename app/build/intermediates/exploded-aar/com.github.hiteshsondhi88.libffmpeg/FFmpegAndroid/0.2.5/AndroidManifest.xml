@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.github.hiteshsondhi88.libffmpeg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="25"
+    android:versionName="0.2.5" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="16" />
+
+    <application />
+
+</manifest>

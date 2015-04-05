@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TwoThumbsSeekBarActivity</string>
+    <string name="device_not_supported_message">FFmpeg is not supported on your device</string>
+    <string name="device_not_supported">Device not supported</string>
+</resources>
