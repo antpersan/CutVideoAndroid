@@ -3,10 +3,14 @@ package com.example.TwoThumbsSeekBarActivity;
 import android.content.Context;
 import android.graphics.*;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 
 public class VideoSliceSeekBar extends ImageView {
+
+    private static final String TAG = VideoSliceSeekBar.class.getSimpleName();
+
     private static final int SELECT_THUMB_LEFT = 1;
     private static final int SELECT_THUMB_RIGHT = 2;
     private static final int SELECT_THUMB_NON = 0;
@@ -16,6 +20,7 @@ public class VideoSliceSeekBar extends ImageView {
     private Bitmap thumbSlice = BitmapFactory.decodeResource(getResources(), R.drawable.ic_feed_player_current_position);
     private Bitmap thumbCurrentVideoPosition = BitmapFactory.decodeResource(getResources(), R.drawable.leftthumb);
     private int progressMinDiff = 15; //percentage
+    private int progressMaxDiff = 100; //percentage
     private int progressColor = getResources().getColor(R.color.blue);
     private int secondaryProgressColor = getResources().getColor(R.color.blue_light);
     private int progressHalfHeight = 3;
@@ -24,6 +29,7 @@ public class VideoSliceSeekBar extends ImageView {
 
 
     private int progressMinDiffPixels;
+    private int progressMaxDiffPixels;
     private int thumbSliceLeftX, thumbSliceRightX, thumbCurrentVideoPositionX;
     private int thumbSliceLeftValue, thumbSliceRightValue;
     private int thumbSliceY, thumbCurrentVideoPositionY;
@@ -71,6 +77,7 @@ public class VideoSliceSeekBar extends ImageView {
             thumbSliceRightX = getWidth() - thumbPadding;
         }
         progressMinDiffPixels = calculateCorrds(progressMinDiff) - 2 * thumbPadding;
+        progressMaxDiffPixels = calculateCorrds(progressMaxDiff) - 2 * thumbPadding;
         progressTop = getHeight() / 2 - progressHalfHeight;
         progressBottom = getHeight() / 2 + progressHalfHeight;
         invalidate();
@@ -132,6 +139,11 @@ public class VideoSliceSeekBar extends ImageView {
                         selectedThumb = SELECT_THUMB_NON;
                     }
 
+                    if ((mx >= thumbSliceLeftX + thumbSliceHalfWidth + progressMaxDiffPixels && selectedThumb == SELECT_THUMB_RIGHT) ||
+                            (mx <= thumbSliceRightX - thumbSliceHalfWidth - progressMaxDiffPixels && selectedThumb == SELECT_THUMB_LEFT)) {
+                        selectedThumb = SELECT_THUMB_NON;
+                    }
+
                     if (selectedThumb == SELECT_THUMB_LEFT) {
                         thumbSliceLeftX = mx;
                     } else if (selectedThumb == SELECT_THUMB_RIGHT) {
@@ -174,18 +186,22 @@ public class VideoSliceSeekBar extends ImageView {
 
 
     private int calculateCorrds(int progress) {
-        return (int) (((getWidth() - 2d * thumbPadding) / maxValue) * progress) + thumbPadding;
+        int width = getWidth();
+        return (int) (((width - 2d * thumbPadding) / maxValue) * progress) + thumbPadding;
     }
 
     public void setLeftProgress(int progress) {
-        if (progress < thumbSliceRightValue - progressMinDiff) {
+        if (progress < thumbSliceRightValue - progressMinDiff
+                && progress > thumbSliceRightValue - progressMaxDiff) {
             thumbSliceLeftX = calculateCorrds(progress);
         }
         notifySeekBarValueChanged();
     }
 
     public void setRightProgress(int progress) {
+        Log.d("VideoSliceSeekBar : ",  "" + progress);
         if (progress > thumbSliceLeftValue + progressMinDiff) {
+            Log.d("VideoSliceSeekBar : ",  "Actualizo slice Right: " + (thumbSliceLeftValue + progressMaxDiff));
             thumbSliceRightX = calculateCorrds(progress);
         }
         notifySeekBarValueChanged();
@@ -229,7 +245,13 @@ public class VideoSliceSeekBar extends ImageView {
 
     public void setProgressMinDiff(int progressMinDiff) {
         this.progressMinDiff = progressMinDiff;
-        progressMinDiffPixels = calculateCorrds(progressMinDiff);
+        progressMinDiffPixels = calculateCorrds((progressMinDiff/100) * maxValue);
+    }
+
+    public void setProgressMaxDiff(int progressMaxDiff) {
+        this.progressMaxDiff = progressMaxDiff;
+        int progressTotal = (progressMaxDiff * maxValue) / 100;
+        progressMaxDiffPixels = calculateCorrds(progressTotal);
     }
 
     public void setProgressHeight(int progressHeight) {

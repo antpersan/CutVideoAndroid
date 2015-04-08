@@ -79,8 +79,10 @@ public class MyActivity extends Activity {
 
                 videoSliceSeekBar.setMaxValue(mp.getDuration());
                 videoSliceSeekBar.setLeftProgress(0);
-                videoSliceSeekBar.setRightProgress(mp.getDuration());
-                videoSliceSeekBar.setProgressMinDiff(10);
+                //videoSliceSeekBar.setRightProgress(mp.getDuration());
+                videoSliceSeekBar.setRightProgress(10000); //10 segundos como máximo de entrada
+                videoSliceSeekBar.setProgressMinDiff((5000 * 100)/mp.getDuration()); //Diferencia mínima de 5 segundos
+                videoSliceSeekBar.setProgressMaxDiff((10000 * 100)/mp.getDuration());//Diferencia máxima de 10 segundos
 
                 videoControlBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
