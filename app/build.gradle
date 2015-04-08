@@ -17,8 +17,6 @@ android {
         }
     }
     dependencies {
-        compile 'com.squareup.dagger:dagger-compiler:1.2.2'
-        compile 'com.squareup.dagger:dagger:1.2.2'
         compile 'com.github.hiteshsondhi88.libffmpeg:FFmpegAndroid:0.2.5'
     }
 }

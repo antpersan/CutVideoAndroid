@@ -27,8 +27,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import javax.inject.Inject;
-
 public class MyActivity extends Activity {
 
     private static final String TAG = MyActivity.class.getSimpleName();
@@ -39,7 +37,6 @@ public class MyActivity extends Activity {
     View videoControlBtn;
     View videoSabeBtn;
 
-    @Inject
     FFmpeg ffmpeg;
 
     private ProgressDialog progressDialog;
